@@ -7,26 +7,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.passwordmanager.mainController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.passwordmanager.dataController">
    <children>
       <Label layoutX="83.0" layoutY="62.0" text="Username:">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <TextField fx:id="userName" layoutX="257.0" layoutY="63.0" />
-      <Button fx:id="saveButton" layoutX="239.0" layoutY="251.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="105.0" text="Save " />
+      <TextField fx:id="userNameField" layoutX="257.0" layoutY="63.0" />
+      <Button fx:id="saveButton" layoutX="239.0" layoutY="251.0" mnemonicParsing="false" onAction="#initialize" prefHeight="41.0" prefWidth="105.0" text="Save " />
       <Label layoutX="85.0" layoutY="116.0" text="Password:">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <PasswordField fx:id="password" layoutX="257.0" layoutY="117.0" />
+      <PasswordField fx:id="passwordField" layoutX="257.0" layoutY="117.0" />
       <Label layoutX="59.0" layoutY="172.0" text="Web Site Name: ">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <TextField fx:id="webSiteName" layoutX="257.0" layoutY="173.0" />
+      <TextField fx:id="websiteField" layoutX="257.0" layoutY="173.0" />
    </children>
 </AnchorPane>

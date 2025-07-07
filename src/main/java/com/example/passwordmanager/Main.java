@@ -11,7 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/passwordmanager/mainScene.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/passwordmanager/mainScene.fxml"));
             Parent root = loader.load();
 
             primaryStage.setTitle("Password Manager");
