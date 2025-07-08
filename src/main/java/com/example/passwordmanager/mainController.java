@@ -30,13 +30,16 @@ public class mainController {
         userNameColumn.setCellValueFactory(new PropertyValueFactory<>("userName"));
         passwordColumn.setCellValueFactory(new PropertyValueFactory<>("password"));
 
+        entryList.clear();
+        entryList.addAll(DataBase.getAllEntries());
         passwordTable.setItems(entryList);
+
 
     }
 
     public void setEntryList(ObservableList<appData> entryList) {
         this.entryList = entryList;
-        passwordTable.setItems(entryList); // refresh display
+        passwordTable.setItems(entryList);
     }
     @FXML
     private void openDataEntryForm(ActionEvent event) {

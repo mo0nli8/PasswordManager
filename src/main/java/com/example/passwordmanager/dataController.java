@@ -33,7 +33,9 @@ public class dataController {
         String password = passwordField.getText();
 
         appData data = new appData(userName, password, website);
-        entryList.add(data);
+        DataBase.insert(data);
+        entryList.clear();
+        entryList.addAll(DataBase.getAllEntries());
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/passwordmanager/mainMenu.fxml"));
