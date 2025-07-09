@@ -1,0 +1,56 @@
+/* Apply to the entire AnchorPane */
+.root {
+    -fx-background-color: #f0f4f8;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Style the search bar */
+.text-field {
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #cbd5e1;
+    -fx-border-width: 1;
+    -fx-padding: 0 10 0 10;
+    -fx-font-size: 14px;
+}
+
+/* TableView style */
+.table-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-table-cell-border-color: transparent;
+    -fx-font-size: 13px;
+}
+
+.table-column {
+    -fx-alignment: CENTER_LEFT;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #e2e8f0;
+    -fx-background-radius: 8 8 0 0;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 32px;
+    -fx-font-weight: bold;
+}
+
+/* Plus button */
+.button {
+    -fx-text-fill: white;
+    -fx-background-radius: 50%;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-width: 30px;
+    -fx-max-height: 30px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #2563eb;
+}

@@ -16,7 +16,7 @@ public class Main extends Application {
             Parent root = loader.load();
 
             primaryStage.setTitle("Password Manager");
-            primaryStage.setScene(new Scene(root, 800, 500)); // Adjust size as needed
+            primaryStage.setScene(new Scene(root, 800, 500));
             primaryStage.show();
         } catch (Exception e) {
             e.printStackTrace();
