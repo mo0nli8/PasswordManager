@@ -12,7 +12,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         DataBase.initDB();
         try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/passwordmanager/mainMenu.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/passwordmanager/mainMenu.fxml"));
             Parent root = loader.load();
 
             primaryStage.setTitle("Password Manager");

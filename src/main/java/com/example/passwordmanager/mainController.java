@@ -15,12 +15,14 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+
 public class mainController {
 
     @FXML private TableView<appData> passwordTable;
     @FXML private TableColumn<appData, String> webSiteNameColumn;
     @FXML private TableColumn<appData, String> userNameColumn;
     @FXML private TableColumn<appData, String> passwordColumn;
+    @FXML private javafx.scene.control.TextField searchBar;
 
     public static ObservableList<appData> entryList = FXCollections.observableArrayList();
 
@@ -31,7 +33,7 @@ public class mainController {
         passwordColumn.setCellValueFactory(new PropertyValueFactory<>("password"));
 
         entryList.clear();
-        entryList.addAll(DataBase.getAllEntries());
+        entryList.setAll(DataBase.getAllEntries());
         passwordTable.setItems(entryList);
 
 
@@ -56,4 +58,15 @@ public class mainController {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void searchPassword() {
+        String keyword = searchBar.getText().trim();
+        if (keyword.isEmpty()) {
+            entryList.setAll(DataBase.getAllEntries());
+        } else {
+            entryList.setAll(DataBase.searchEntries(keyword));
+        }
+    }
+
 }
